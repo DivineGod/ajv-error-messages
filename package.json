@@ -1,0 +1,31 @@
+{
+  "name": "ajv-error-messages",
+  "version": "1.0.0",
+  "description": "Normalise AJV error messages",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DivineGod/ajv-error-messages.git"
+  },
+  "keywords": [
+    "ajv",
+    "jsonschema",
+    "schema"
+  ],
+  "author": "Anders Rasmussen <divinegod@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DivineGod/ajv-error-messages/issues"
+  },
+  "homepage": "https://github.com/DivineGod/ajv-error-messages#readme",
+  "devDependencies": {
+    "ajv": "^4.6.0",
+    "tape": "^4.6.0"
+  }
+}
