@@ -31,15 +31,16 @@ var validator = schemaValidator.compile(schema);
 function validatingData(data) {
 
     var valid = validator(data);
+    var normalisedErrors;
     if (!valid) {
-        var ajv-errors = validator.errors
-        var normalisedErrors = normalise(ejv-errors);
+        var ajv_errors = validator.errors
+        normalisedErrors = normalise(ajv_errors);
     }
 
     return valid || normalisedErrors;
 }
 
-console.log(JSON.stringify(validatingData(invalid)));
+console.log(JSON.stringify(validatingData(invalidData)));
 ```
 
 results in
