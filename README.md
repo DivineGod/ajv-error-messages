@@ -33,8 +33,8 @@ function validatingData(data) {
     var valid = validator(data);
     var normalisedErrors;
     if (!valid) {
-        var ajv_errors = validator.errors
-        normalisedErrors = normalise(ajv_errors);
+        var ajvErrors = validator.errors
+        normalisedErrors = normalise(ajvErrors);
     }
 
     return valid || normalisedErrors;
