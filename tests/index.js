@@ -50,3 +50,33 @@ test('should normalise errors', function(t) {
     t.notOk(isValid, 'validation failed');
     t.deepEqual(normalisedErrors, expectedErrors, 'correctly normalised errors');
 });
+
+test('should work with root array', function(t) {
+    t.plan(2);
+
+    var testSchema = {
+        description: 'test schema',
+        type: 'array',
+        items: [
+            { type: 'string', },
+            { type: 'integer', },
+        ],
+        minItems: 2,
+        maxItems: 2,
+    };
+    var testData = [123,'123',{}];
+
+    var expectedErrors = {
+        fields: {
+            '': ['Should NOT have more than 2 items'],
+            '[0]': ['Should be string'],
+            '[1]': ['Should be integer'],
+        },
+    };
+
+    var validator = schemaValidator.compile(testSchema);
+    var isValid = validator(testData);
+    var normalisedErrors = normalise(validator.errors);
+    t.notOk(isValid, 'validation failed');
+    t.deepEqual(normalisedErrors, expectedErrors, 'correctly normalised errors');
+});

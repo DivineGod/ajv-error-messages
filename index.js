@@ -1,7 +1,12 @@
 function normaliseErrorMessages(errors) {
+    console.log(errors);
     var fields = errors.reduce(
         function (acc, e) {
-            acc[e.dataPath.slice(1)] = [e.message.toUpperCase()[0] + e.message.slice(1)];
+            if (e.dataPath.length && e.dataPath[0] === '.') {
+                acc[e.dataPath.slice(1)] = [e.message.toUpperCase()[0] + e.message.slice(1)];
+            } else {
+                acc[e.dataPath] = [e.message.toUpperCase()[0] + e.message.slice(1)];
+            }
             return acc;
         },
         {}
