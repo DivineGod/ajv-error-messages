@@ -1,5 +1,4 @@
 function normaliseErrorMessages(errors) {
-    console.log(errors);
     var fields = errors.reduce(
         function (acc, e) {
             if (e.dataPath.length && e.dataPath[0] === '.') {
