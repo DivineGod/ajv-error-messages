@@ -14,20 +14,33 @@ test('should normalise errors', function(t) {
     var testSchema = {
         description: 'test schema',
         type: 'object',
-        required: ['foo'],
+        required: ['foo', 'arrayThing'],
         additionalProperties: false,
         properties: {
             foo: {
                 type: 'string',
             },
+            arrayThing: {
+                type: 'array',
+                items: [
+                    { type: 'string', },
+                    { type: 'integer', },
+                ],
+                minItems: 2,
+                maxItems: 2,
+            },
         },
     };
     var testData = {
         foo: 1,
+        arrayThing: [123,'123',{}],
     };
     var expectedErrors = {
         fields: {
             foo: ['Should be string'],
+            arrayThing: ['Should NOT have more than 2 items'],
+            'arrayThing[0]': ['Should be string'],
+            'arrayThing[1]': ['Should be integer'],
         },
     };
 
