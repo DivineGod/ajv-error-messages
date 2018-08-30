@@ -11,7 +11,7 @@ function normaliseErrorMessages(errors) {
         {}
     );
 
-    return { fields };
+    return { fields: fields };
 }
 
 module.exports = normaliseErrorMessages;
