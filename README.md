@@ -4,6 +4,14 @@ Normalise errors from ajv to a simpler format.
 
 Takes ajv errors and returns a simpler object. Inspired by https://github.com/MauriceButler/jayschema-error-messages
 
+## Fork support ES5
+
+**This is a fork that ensure backward compatibility with ES5**, without providing a build folder. It basically makes it work with react-create-app, or anything that uses babel for building stuff.
+
+To be added in your package.json:
+
+`"ajv-error-messages": "git+ssh://git@github.com:StudyLink-fr/ajv-error-messages.git#v1.1.1",`
+
 ## Usage
 
 ```javascript
