@@ -1,6 +1,6 @@
 {
   "name": "ajv-error-messages",
-  "version": "1.0.2",
+  "version": "1.1.1",
   "description": "Normalise AJV error messages",
   "main": "index.js",
   "directories": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/DivineGod/ajv-error-messages#readme",
   "devDependencies": {
-    "ajv": "^4.6.0",
+    "ajv": "^6.5.3",
     "tape": "^4.6.0"
   }
 }
