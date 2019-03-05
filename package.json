@@ -2,12 +2,13 @@
   "name": "ajv-error-messages",
   "version": "1.0.2",
   "description": "Normalise AJV error messages",
-  "main": "index.js",
+  "main": "dist/index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "node tests"
+    "test": "node tests",
+    "build": "parcel build index.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,8 @@
   },
   "homepage": "https://github.com/DivineGod/ajv-error-messages#readme",
   "devDependencies": {
-    "ajv": "^4.6.0",
+    "ajv": "^6.10.0",
+    "parcel-bundler": "^1.11.0",
     "tape": "^4.6.0"
   }
 }
