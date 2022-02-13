@@ -1,5 +1,4 @@
 function normaliseErrorMessages(errors) {
-  console.log(errors);
   var fields = errors.reduce(function (acc, e) {
     if (e.instancePath.length && e.instancePath[0] === ".") {
       acc[e.instancePath.slice(1)] = [
