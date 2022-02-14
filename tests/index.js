@@ -34,10 +34,10 @@ test("should normalise errors", function (t) {
   };
   var expectedErrors = {
     fields: {
-      "/foo": ["Must be string"],
-      "/arrayThing": ["Must NOT have more than 2 items"],
-      "/arrayThing/0": ["Must be string"],
-      "/arrayThing/1": ["Must be integer"],
+      foo: ["Must be string"],
+      arrayThing: ["Must NOT have more than 2 items"],
+      "arrayThing/0": ["Must be string"],
+      "arrayThing/1": ["Must be integer"],
     },
   };
 
