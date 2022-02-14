@@ -48,7 +48,7 @@ results in
 ```
 {
     fields: {
-        '/foo': ['Must be string']
+        'foo': ['Must be string']
     }
 }
 ```
