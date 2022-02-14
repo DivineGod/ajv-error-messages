@@ -4,6 +4,10 @@ Normalise errors from ajv to a simpler format.
 
 Takes ajv errors and returns a simpler object. Inspired by https://github.com/MauriceButler/jayschema-error-messages
 
+# AJV Version
+
+v2 of `ajv-error-messages` has been upgraded to work with v8 of `ajv` 
+
 ## Usage
 
 ```javascript
